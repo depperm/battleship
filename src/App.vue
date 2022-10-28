@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
@@ -8,7 +7,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
     <div class="wrapper">
-      <p>UserId: {{userStore.userId}}</p>
+      <p>UserId: {{ userStore.userId }}</p>
       <!-- <Lobby /> -->
       <!-- <HelloWorld msg="You did it!" /> -->
 
@@ -23,18 +22,17 @@ import HelloWorld from './components/HelloWorld.vue'
 </template>
 
 <script lang="ts">
-
-import {useUserStore} from '@/stores/user'
-import { mapStores } from 'pinia'
+import { useUserStore } from "@/stores/user";
+import { mapStores } from "pinia";
 
 export default {
   computed: {
-    ...mapStores(useUserStore)
+    ...mapStores(useUserStore),
   },
-  created(){
-    console.log('test',this.userStore)
-  }
-}
+  created() {
+    console.log("test", this.userStore);
+  },
+};
 </script>
 
 <style scoped>

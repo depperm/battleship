@@ -1,5 +1,3 @@
 <template>
-  <main>
-    How to Play:
-  </main>
+  <main>How to Play:</main>
 </template>
